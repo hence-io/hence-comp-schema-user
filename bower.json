@@ -1,0 +1,24 @@
+{
+  "name": "hence-comp-schema-user",
+  "version": "0.1.0",
+  "authors": [
+    "Sean Homer <sean.homer@therefore.ca>"
+  ],
+  "description": "An element providing a starting point for your own reusable Polymer elements.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer"
+  ],
+  "main": "dist/hence-comp-schema-user.html",
+  "homepage": "https://github.com/homertherefore/hence-comp-schema-user/",
+  "ignore": [
+    "/.*",
+    "/comp/gulp/",
+    "/comp/test/"
+  ],
+  "dependencies": {"polymer":"Polymer/polymer#^1.0.0"},
+  "devDependencies": {
+    "web-component-tester": "*"
+  }
+}
