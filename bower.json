@@ -2,7 +2,7 @@
   "name": "hence-comp-schema-user",
   "version": "0.1.0",
   "authors": [
-    "Sean Homer <sean.homer@therefore.ca>"
+    "author": "Sean 'Blitz' Homer <sean.homer@therefore.ca>",
   ],
   "description": "An element providing a starting point for your own reusable Polymer elements.",
   "keywords": [
@@ -17,7 +17,10 @@
     "/comp/gulp/",
     "/comp/test/"
   ],
-  "dependencies": {"polymer":"Polymer/polymer#^1.0.0"},
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "font-awesome": "~4.3.0"
+  },
   "devDependencies": {
     "web-component-tester": "*"
   }
