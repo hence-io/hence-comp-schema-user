@@ -51,14 +51,8 @@ let HenceCompSchemaUser = HenceComp({
    * or kick off any processes the element wants to perform.
    */
     ready() {
-    // WARNING, updating DOM elements HERE may override variable revisions in the factoryImpl function if created
-    // with the createElement function,leveraging the components defaults instead. If the element is embedded, no issue.
-
-    // Access a local DOM element by ID using this.$
-    // this.$.greeting.textContent += ", has loaded!";
-
-    // Access a local DOM element by selector using this.$$('')
-    // this.$$('#greeting').textContent += ", has loaded!";
+    //console.log('ready::_executeQuery on',this.action);
+    //this._executeQuery();
   },
 
   /**
@@ -67,40 +61,8 @@ let HenceCompSchemaUser = HenceComp({
    * loading resources, etc).
    */
     attached() {
-    let self = this;
-    let query = self.query;
-
-    if (!self.results) {
-      self.results = [];
-    }
-
-    switch (this.action) {
-      case 'getUser':
-        // do query
-
-        if (query.id === 2) {
-          self.results.push({
-            firstName: 'Jane',
-            lastName: 'Doe',
-            email: 'jane@doe.com',
-            mySites: {
-              'Site 1': '#site1',
-              'Site 2': '#site2'
-            }
-          });
-        } else {
-          self.results.push({
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'jone@doe.com',
-            mySites: {
-              'Site 1': '#site1',
-              'Site 2': '#site2'
-            }
-          });
-        }
-        break;
-    }
+    console.log('attached::_executeQuery on',this.action);
+    this._executeQuery();
   },
 
   /**
@@ -124,6 +86,43 @@ let HenceCompSchemaUser = HenceComp({
    * Element Behaviour
    ********************************************************************************************************************/
 
+    _executeQuery() {
+    let self = this;
+    let query = self.query || {};
+    let results = self.results || [];
+
+    switch (this.action) {
+      case 'getUser':
+        // do query
+
+        if (query.id === 2) {
+          results.push({
+            firstName: 'Jane',
+            lastName: 'Doe',
+            email: 'jane@doe.com',
+            mySites: {
+              'Site 1': '#site1',
+              'Site 2': '#site2'
+            }
+          });
+        } else {
+          results.push({
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'jone@doe.com',
+            mySites: {
+              'Site 1': '#site1',
+              'Site 2': '#site2'
+            }
+          });
+        }
+        break;
+    }
+
+    console.log('_executeQuery ',results,query);
+
+    this.set('results',results);
+  }
 });
 
 export {is};
