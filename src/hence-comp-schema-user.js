@@ -34,14 +34,9 @@ let HenceCompSchemaUser = HenceSchema({
    * Element DOM Hooks
    ********************************************************************************************************************/
 
-  /**
-   * `attached` fires once the element and its parents have been inserted  into a document. This is a good place to
-   * perform any work related to your element's visual state or active behavior (measuring sizes, beginning animations,
-   * loading resources, etc).
-   */
-    attached() {
+    ready() {
     this.async(()=> {
-      console.log('attached::_executeQuery on', this.action);
+      //console.log('attached::_executeQuery on', this.action);
       this._executeQuery();
     })
   },
