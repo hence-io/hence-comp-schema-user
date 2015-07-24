@@ -2,7 +2,7 @@
   "name": "hence-comp-schema-user",
   "version": "0.1.0",
   "authors": [
-    "author": "Sean 'Blitz' Homer <sean.homer@therefore.ca>",
+    "Sean 'Blitz' Homer <sean.homer@therefore.ca>"
   ],
   "description": "An element providing a starting point for your own reusable Polymer elements.",
   "keywords": [
