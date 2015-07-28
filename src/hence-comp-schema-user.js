@@ -81,7 +81,7 @@ let HenceCompSchemaUser = HenceSchema({
 
     //console.log('_executeQuery ', results, query);
 
-    this.set('results', results);
+    return results;
   }
 });
 
