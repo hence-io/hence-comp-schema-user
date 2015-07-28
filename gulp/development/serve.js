@@ -1,15 +1,19 @@
 'use strict';
 
-var gulp = require('gulp');
+import gulp from 'gulp';
+import path from 'path';
+import util from 'gulp-util';
+import htmlInjector from "bs-html-injector";
+
 // browserSync
-var browserSync = require('browser-sync').create();
-var path = require('path');
-var util = require('gulp-util');
-var htmlInjector = require("bs-html-injector");
+import browserSyncConstructor from 'browser-sync';
+let browserSync = browserSyncConstructor.create();
 
+import sassCompilation from './../sass';
+sassCompilation('sass',global.paths.tmp,browserSync);
 
-// sass
-require('./sass')(browserSync);
+import htmlCompilation from './../html';
+htmlCompilation('html');
 
 /**
  * browserSync Tasks

@@ -9,13 +9,6 @@ import minifyCss from 'gulp-minify-css';
 import gulpkss from 'gulp-kss';
 import gulpif from 'gulp-if';
 
-let compassOptions = {
-  //config_file: './config.rb',
-  sass: global.paths.src,
-  css: global.paths.tmp + 'css',
-  require: ['susy', 'modular-scale', 'breakpoint','font-awesome-sass']
-};
-
 /**
  * Sass Tasks
  */
@@ -26,7 +19,7 @@ let sassCompilation = function(taskName, destDir, browserSync, minify = false, k
       .pipe(gulp.dest(destDir + 'fonts'));
 
     gulp.src(global.paths.sass)
-      .pipe(compass(compassOptions))
+      .pipe(compass(global.compassOptions))
       .pipe(concat('hence-comp-ui-sample.css'))
       .pipe(autoprefixer())
       .pipe(sourcemaps.init({loadMaps: true})) // loads map
