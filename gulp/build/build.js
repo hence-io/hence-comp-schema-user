@@ -19,7 +19,6 @@ import imagemin from 'gulp-imagemin';
 // Sass
 import autoprefixer from 'gulp-autoprefixer';
 import minifyCss from 'gulp-minify-css';
-import gulpkss from 'gulp-kss';
 
 // JS
 import uglify from 'gulp-uglify';
@@ -33,18 +32,18 @@ import browserSyncConstructor from 'browser-sync';
 let browserSync = browserSyncConstructor.create();
 
 import sassCompilation from './../sass';
-sassCompilation('buildsass', browserSync, true);
+sassCompilation({taskName: 'buildsass', browserSync: browserSync, dist: true});
 
 import htmlCompilation from './../html';
 htmlCompilation('buildhtml', true);
 
 // One build task to rule them all.
 gulp.task('build', (done)=> {
-  runSeq('clean', ['buildsass', 'buildimg', 'buildjs'], 'buildhtml', done);
+  runSeq('clean', ['buildsass', 'buildimg', 'buildjs', 'kss'], 'buildhtml', done);
 });
 
 gulp.task('build:serve', (done)=> {
-  runSeq('clean', ['buildsass', 'buildimg', 'buildjs'], 'buildhtml', function () {
+  runSeq('clean', ['build'], 'buildhtml', function () {
     browserSync.init({
       server: {
         baseDir: ['./']
