@@ -3,7 +3,7 @@
  * @module hence-comp-schema-user
  */
 import console from 'consoler';
-import {HenceSchema} from 'hence-comp';
+import {HenceSchema} from 'hence-polycore';
 
 let is = 'hence-comp-schema-user';
 
