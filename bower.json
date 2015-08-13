@@ -1,5 +1,5 @@
 {
-  "name": "hence-comp-schema-user",
+  "name": "hence-user",
   "version": "0.1.0",
   "authors": [
     "Sean 'Blitz' Homer <sean.homer@therefore.ca>"
@@ -10,8 +10,8 @@
     "web-components",
     "polymer"
   ],
-  "main": "dist/hence-comp-schema-user.html",
-  "homepage": "https://github.com/homertherefore/hence-comp-schema-user/",
+  "main": "dist/hence-user.html",
+  "homepage": "https://github.com/homertherefore/hence-user/",
   "ignore": [
     "/.*",
     "/comp/gulp/",

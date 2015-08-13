@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import Component from '../../src/hence-comp-schema-user';
+import Component from '../../src/hence-user';
 
-describe('ES6 component Tests - hence-comp-schema-user', () => {
+describe('ES6 component Tests - hence-user', () => {
   let component;
 
   beforeEach(() => {
@@ -16,10 +16,10 @@ describe('ES6 component Tests - hence-comp-schema-user', () => {
   });
 
   it('should sayHello', () => {
-    expect(component.sayHello()).to.equal('hence-comp-schema-user says, Hello World!');
+    expect(component.sayHello()).to.equal('hence-user says, Hello World!');
   });
 
   it('should have a polymer config', () => {
-    expect(component.is).to.equal('hence-comp-schema-user');
+    expect(component.is).to.equal('hence-user');
   });
 });

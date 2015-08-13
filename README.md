@@ -1,7 +1,7 @@
 # Hence.io Component Stack
-## hence-comp-schema-user
+## hence-user
 
-> 
+>
 
 An element providing a starting point for your own reusable Polymer elements.
 
@@ -9,7 +9,7 @@ An element providing a starting point for your own reusable Polymer elements.
 
 Add this component to your polymer project with:
 
-    <link rel="import" href="bower_components/hence-comp-schema-user.html" >
+    <link rel="import" href="bower_components/hence-user.html" >
 
 # Development
 
@@ -37,10 +37,10 @@ Will compile your component for consumption, exporting it to a /dist folder
 ```$ gulp test```
 Will execute the wct test tool to perform selenium tests on your web component
 
-```$ gulp test:karma```  
+```$ gulp test:karma```
 Will execute es6 unit testing on your web component's script files
 
-```$ gulp test:karma-watch```  
+```$ gulp test:karma-watch```
 Will execute the karma tests and set a watcher on the component and test script files
 
 ### Inspired By

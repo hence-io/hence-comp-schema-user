@@ -1,17 +1,17 @@
 'use strict';
 /**
- * @module hence-comp-schema-user
+ * @module hence-user
  */
 import console from 'consoler';
 import {HenceSchema} from 'hence-polycore';
 
-let is = 'hence-comp-schema-user';
+let is = 'hence-user';
 
 /**
- * HenceCompSchemaUser Component
+ * HenceUser Component
  * @constructor
  */
-let HenceCompSchemaUser = HenceSchema({
+let HenceUser = HenceSchema({
   is, // auto set as is : is, es6 laziness joy!
   /********************************************************************************************************************
    * Initialization
@@ -75,4 +75,4 @@ let HenceCompSchemaUser = HenceSchema({
 });
 
 export {is};
-export default HenceCompSchemaUser;
+export default HenceUser;

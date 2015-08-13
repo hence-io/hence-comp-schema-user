@@ -1,4 +1,4 @@
 'use strict';
 
-import HenceCompSchemaUser from './../../src/hence-comp-schema-user';
-HenceCompSchemaUser.registerElement();
+import HenceUser from './../../src/hence-user';
+HenceUser.registerElement();

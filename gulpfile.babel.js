@@ -5,9 +5,14 @@ var srcDir = './src/';
 var tmpDir = './.tmp/';
 var buildSrcDir = './gulp/src/';
 
+var name = 'hence-user';
 global.comp = {
-  name: 'hence-comp-schema-user',
-  camel: 'HenceCompSchemaUser'
+  name: name,
+  js: name + '.js',
+  scss: name + '.scss',
+  css: name + '.css',
+  html: name + '.html',
+  camel: 'HenceUser'
 };
 
 // Specify paths & globbing patterns for tasks.
