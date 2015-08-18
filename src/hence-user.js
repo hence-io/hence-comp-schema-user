@@ -3,13 +3,13 @@
  * @module hence-user
  */
 import console from 'consoler';
-import {HenceSchema} from 'hence-polycore';
+import Hence from 'hence-component-framework';
 
 /**
  * HenceUser Component
  * @constructor
  */
-let HenceUser = HenceSchema({
+let HenceUser = Hence.Schema({
   is: 'hence-user',
   /********************************************************************************************************************
    * Initialization

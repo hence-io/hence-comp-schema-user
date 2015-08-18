@@ -2948,7 +2948,7 @@ var _consoler = require('consoler');
 
 var _consoler2 = _interopRequireDefault(_consoler);
 
-var _hencePolycore = require('hence-polycore');
+var _hencePolycore = require('hence-component-framework');
 
 /**
  * HenceUser Component
@@ -3013,7 +3013,7 @@ var HenceUser = (0, _hencePolycore.HenceSchema)({
 exports['default'] = HenceUser;
 module.exports = exports['default'];
 
-},{"consoler":1,"hence-polycore":2}],76:[function(require,module,exports){
+},{"consoler":1,"hence-component-framework":2}],76:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) {
