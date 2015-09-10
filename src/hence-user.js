@@ -4,6 +4,7 @@
  */
 import console from 'consoler';
 import Hence from 'hence-component-framework';
+import API from './.mapi';
 
 /**
  * HenceUser Component
@@ -15,7 +16,6 @@ let HenceUser = Hence.Schema({
    * Initialization
    ********************************************************************************************************************/
   properties: {},
-
 
   /*********************************************************************************************************************
    * Element Behaviour
@@ -29,38 +29,36 @@ let HenceUser = Hence.Schema({
    */
     _executeQuery(done) {
     let self = this;
-    let {action,query} = self;
-    let results = [];
 
-    switch (action) {
-      case 'getUser':
-        // do query
+    try {
+      let {action, query} = self;
 
-        if (query.id === 2) {
-          results.push({
-            firstName: 'Jane',
-            lastName: 'Doe',
-            email: 'jane@doe.com',
-            mySites: {
-              'Site 1': '#site1',
-              'Site 2': '#site2'
+      switch (action) {
+        case 'getUser':
+          API.find(query, function (err, entry) {
+            if (err) {
+              // handle error
             }
+
+            return done(err, entry);
           });
-        } else {
-          results.push({
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'jone@doe.com',
-            mySites: {
-              'Site 1': '#site1',
-              'Site 2': '#site2'
+
+          break;
+        case 'getUsers':
+          API.find(function (err, entries) {
+            if (err) {
+              // handle error
             }
+
+            return done(err, entries);
           });
-        }
-        break;
+
+          break;
+      }
+    } catch (e) {
+      console.error(`${self.is}._executeQuery::failure`, e);
+      done(e);
     }
-
-    done(null, results);
   }
 });
 

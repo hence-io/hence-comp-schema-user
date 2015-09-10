@@ -12,7 +12,7 @@
     "esdocs": "esdoc -c .esdoc.json",
     "sassdocs": "sassdoc src/scss",
     "jsdocs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
-    "install-deps" : "npm i -g gulp && gulp install-deps"
+    "install-deps": "npm i -g gulp && gulp install-deps"
   },
   "browserify": {
     "transform": [
@@ -80,8 +80,9 @@
   },
   "dependencies": {
     "consoler": "git://github.com/blitzcodes/consoler",
-    "hence-component-framework": "hence-io/hence-component-framework",
     "doc-ready": "^1.0.3",
+    "faker": "^3.0.1",
+    "hence-component-framework": "hence-io/hence-component-framework",
     "lodash": "^3.10.0",
     "moment": "^2.10.3",
     "string": "^3.3.0"
