@@ -26,7 +26,7 @@ let MockAPI = {
         }
       ],
       biography: faker.hacker.phrase(),
-      profilePhoto: faker.image.imageUrl()
+      profilePhoto: faker.image.nature()
     });
   },
   list() {

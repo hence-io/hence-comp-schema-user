@@ -2,7 +2,7 @@
 /**
  * @module hence-user
  */
-import console from 'consoler';
+
 import Hence from 'hence-component-framework';
 import API from './.mapi';
 
