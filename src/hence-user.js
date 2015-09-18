@@ -28,14 +28,12 @@ let HenceUser = Hence.Schema({
    * @private
    */
     _executeQuery(done) {
-    let self = this;
-
     try {
-      let {action, query} = self;
+      let {action, query} = this;
 
       switch (action) {
         case 'getUser':
-          API.find(query, function (err, entry) {
+          API.find(query, (err, entry) => {
             if (err) {
               // handle error
             }
@@ -45,7 +43,7 @@ let HenceUser = Hence.Schema({
 
           break;
         case 'getUsers':
-          API.find(function (err, entries) {
+          API.find((err, entries) => {
             if (err) {
               // handle error
             }
@@ -56,7 +54,7 @@ let HenceUser = Hence.Schema({
           break;
       }
     } catch (e) {
-      console.error(`${self.is}._executeQuery::failure`, e);
+      console.error(`${this.is}._executeQuery::failure`, e);
       done(e);
     }
   }
