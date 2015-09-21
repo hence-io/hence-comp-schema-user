@@ -32,7 +32,7 @@ let HenceUser = Hence.Schema({
       let {action, query} = this;
 
       switch (action) {
-        case 'getUser':
+        case 'get':
           API.find(query, (err, entry) => {
             if (err) {
               // handle error
@@ -42,7 +42,7 @@ let HenceUser = Hence.Schema({
           });
 
           break;
-        case 'getUsers':
+        case 'list':
           API.find((err, entries) => {
             if (err) {
               // handle error
